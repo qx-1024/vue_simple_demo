@@ -33,6 +33,17 @@ export function doPost(url, data){
     })
 }
 
+export function uploadFile(url, data){
+    return axios({
+        method: "post",
+        url: url,
+        data: data,
+        headers: {
+            'Content-Type': 'multipart/form-data'
+        }
+    })
+}
+
 export function doPut(url, data){
     return axios({
         method: "put",
